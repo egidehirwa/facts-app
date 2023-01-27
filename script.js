@@ -11,6 +11,8 @@ btn.addEventListener("click", function () {
   }
 });
 
+/*
+
 function calcFactAge(year) {
   const currentYear = new Date().getFullYear();
   const age = currentYear - year;
@@ -31,7 +33,7 @@ const calcFactAge2 = (year) =>
     ? new Date().getFullYear() - year
     : `Impossible year. Year needs to be less or equal to ${new Date().getFullYear()}`;
 
-/* 
+
 let votesInteresting = "";
 let votesMindblowing = 40;
 
@@ -71,3 +73,121 @@ const str = `This is from ${upperText}. It has been true for ${calcFactAge(
 console.log(str);
 
  */
+
+/*
+
+// ARRAYS
+
+const fact = ["Lisbon is the capital of Portugal", 2020, true];
+
+console.log(fact);
+console.log(fact[1]);
+console.log(fact.length);
+console.log(fact[fact.length - 1]);
+
+const [text, createdIn, isCorrect] = fact;
+console.log(text, createdIn);
+
+// ... These three dots are called the spread operator. They unpack the previous array and add all the elements into the new array (spreading). This operation only works inside a list.
+const newFact = [...fact, "society"];
+console.log(newFact);
+
+// OBJECTS - Aggregates different values into one big value. In an array the values don't have a name as opposed to objects which have one. An object is composed of a key value pair.
+
+const factObj = {
+  text: "The capital of Belgium is Brussels", // text is a property of the factObj object
+  category: "society",
+  createdIn: 2010,
+  isCorrect: true,
+  createSummary: function () {
+    return `${this.text}, it was created in ${this.createdIn}. It is reffered to as ${this.category}`;
+  },
+};
+
+console.log(factObj.createSummary());
+console.log(factObj["isCorrect"]); // must be declared as a string
+
+// How to create variables from the object using destructuring
+
+const { category, createdin } = factObj;
+console.log(category);
+console.log(factObj.createSummary());
+
+// LOOPING OVER ARRAYS
+
+[3, 6, 8, 10].forEach(function (el) {
+  console.log(el);
+});
+
+const times10 = [3, 6, 8, 10].map(function (x) {
+  return x * 10;
+});
+console.log(times10);
+
+const times5 = [3, 6, 8, 10].map((x) => x * 5);
+console.log(times5);
+
+const CATEGORIES = [
+  { name: "technology", color: "#3b82f6" },
+  { name: "science", color: "#16a34a" },
+  { name: "finance", color: "#ef4444" },
+  { name: "society", color: "#eab308" },
+  { name: "entertainment", color: "#db2777" },
+  { name: "health", color: "#14b8a6" },
+  { name: "history", color: "#f97316" },
+  { name: "news", color: "#8b5cf6" },
+];
+
+const onlyNames = CATEGORIES.map((y) => y.name);
+console.log(onlyNames);
+
+const initialFacts = [
+  {
+    id: 1,
+    text: "React is being developed by Meta (formerly facebook)",
+    source: "https://opensource.fb.com/",
+    category: "technology",
+    votesInteresting: 24,
+    votesMindblowing: 9,
+    votesFalse: 4,
+    createdIn: 2021,
+  },
+  {
+    id: 2,
+    text: "Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%",
+    source:
+      "https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids",
+    category: "society",
+    votesInteresting: 11,
+    votesMindblowing: 2,
+    votesFalse: 0,
+    createdIn: 2019,
+  },
+  {
+    id: 3,
+    text: "Lisbon is the capital of Portugal",
+    source: "https://en.wikipedia.org/wiki/Lisbon",
+    category: "society",
+    votesInteresting: 8,
+    votesMindblowing: 3,
+    votesFalse: 1,
+    createdIn: 2015,
+  },
+];
+
+function calcFactAge(year) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - year;
+
+  if (age >= 0) return age;
+  else return "impossible year";
+}
+
+const factAges = initialFacts.map((el) => calcFactAge(el.createdIn));
+console.log(factAges);
+
+*/
+
+// DOM MANIPULATION
+
+console.dir(btn);
