@@ -67,29 +67,6 @@ btn.addEventListener("click", function () {
 
 factsList.innerHTML = "";
 
-// Load data from Supabase
-loadFacts();
-
-async function loadFacts() {
-  const res = await fetch(
-    "https://tmrywsxlktedwvqzccpd.supabase.co/rest/v1/facts",
-    {
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRtcnl3c3hsa3RlZHd2cXpjY3BkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ2ODQ4NzEsImV4cCI6MTk5MDI2MDg3MX0.DhouuF8HLiujnM6GbhCeIdeRmIixuSFfhXgar9jgHyc",
-        authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRtcnl3c3hsa3RlZHd2cXpjY3BkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ2ODQ4NzEsImV4cCI6MTk5MDI2MDg3MX0.DhouuF8HLiujnM6GbhCeIdeRmIixuSFfhXgar9jgHyc",
-      },
-    }
-  );
-  const data = await res.json();
-  console.log(data);
-  // const filteredData = data.filter((fact) => fact.category === "technology");
-  // console.log(filteredData);
-
-  createFactsList(data);
-}
-
 // Adding elements dynamically to the DOM
 
 // createFactsList(initialFacts);
