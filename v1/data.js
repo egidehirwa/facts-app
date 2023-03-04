@@ -51,6 +51,16 @@ const initialFacts = [
     votesFalse: 1,
     createdIn: 2019,
   },
+  {
+    id: 4,
+    text: "Brussels is the capital of Belgium",
+    source: "https://en.wikipedia.org/wiki/Brussels",
+    category: "society",
+    votesInteresting: 18,
+    votesMindblowing: 1,
+    votesFalse: 1,
+    createdIn: 2019,
+  },
 ];
 
 // LINK TO APP SAMPLE DATA: https://docs.google.com/spreadsheets/d/1eeldcA_OwP4DHYEvjG0kDe0cRys-cDPhc_E9P9G1e3I/edit#gid=0
